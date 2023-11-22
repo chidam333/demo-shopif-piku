@@ -17,7 +17,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        hi
+        hi lol
         <Outlet />
         <ScrollRestoration />
         <LiveReload />

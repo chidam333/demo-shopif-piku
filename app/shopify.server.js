@@ -24,6 +24,15 @@ const shopify = shopifyApp({
       deliveryMethod: DeliveryMethod.Http,
       callbackUrl: "/webhooks",
     },
+    ORDER_CREATION: {
+      deliveryMethod: DeliveryMethod.Http,
+      callbackUrl: "/webhooks",
+      callback: (topic, shop, body, webhookId)=>{
+        console.log("order created 🥳")
+        const payload = JSON.parse(body)
+        console.log({payload})
+      } 
+    },
   },
   hooks: {
     afterAuth: async ({ session }) => {
